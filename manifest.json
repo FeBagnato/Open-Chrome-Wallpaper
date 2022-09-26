@@ -1,0 +1,12 @@
+{
+    "name": "Open Chrome Wallpaper",
+    "version": "1.0.0",
+    "description": "Set a wallpaper for new tabs in Chrome",
+    "manifest_version": 3,
+    "author": "Felipe Bagnato",
+    "action":{},
+    
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+   }
+}
