@@ -19,10 +19,48 @@
             overflow: hidden;
             z-index: -1;
         }
+        #shortcuts{
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-60%, -65%);
+            background-color: rgba(211, 211, 211, 0.26);
+            border-radius: 8px;
+        }
+        .website{
+            text-align: center;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            padding: 15px;
+            margin-right: 4px;
+            background-color: rgba(91, 91, 91, 0.478);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .website > p{
+            margin-top: -2px;
+        }
+        .website > img {
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body>
+    <div id="shortcuts">
+        <div class="website" onclick="location.href='https://github.com'">
+            <img src="https://logo.clearbit.com/github.com" width="50px">
+            <p>Github</p>
+        </div>
 
+        <div class="website" onclick="location.href='https://youtube.com'">
+            <img src="https://logo.clearbit.com/youtube.com" width="50px">
+            <p>Youtube</p>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
