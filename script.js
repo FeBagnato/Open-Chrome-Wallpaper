@@ -11,8 +11,21 @@ function setShortcuts(){
     let div_shortcuts = document.getElementById('shortcuts')
 
     for(let i in shortcuts){
+        let link = ''
+        let after_tld = false
+        let this_link = shortcuts[i].link
+        for (let y in this_link){
+            if(this_link[y] == '.'){
+                after_tld = true
+            }
+            else if(this_link[y] == '/'){
+                if(after_tld == true) break
+            }
+            link += this_link[y]
+        }
+
         div_shortcuts.innerHTML += "<div id='" + shortcuts[i].name + "' class='website'>" +
-            "<img src='https://logo.clearbit.com/" + shortcuts[i].link + 
+            "<img src='https://logo.clearbit.com/" + link + 
                 "' width='50px' height='50px'>" +
             "<p>" + shortcuts[i].name + "</p>" +
         "</div>"
