@@ -6,11 +6,11 @@ Download the extension<br>
 <br>(if you download the zip file, dont forget to unzip)
 
 ### Step 2
-Open the Chrome extension page and turn on the "Developer Mode"
+Open the Chrome extension page and turn on the "Developer Mode"<br>
 ![](./img/install_step2.png)
 
 ### Step 3
-Click "Load unpacked" and select the extension folder you downloaded
+Click "Load unpacked" and select the extension folder you downloaded<br>
 ![](./img/install_step3.png)
 
 ## And it is done!
