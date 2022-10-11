@@ -8,7 +8,7 @@ Note: All contents(images & shortcuts) are stored locally. As extensions can't h
 ## Step 2 - Place your images
 Your images must be sorted numerically and in the webp format. As shows the image below
 <br>![](./img/change_wp2.png)
-(you can use this [online tool](https://convertio.co/webp-converter/) to convert images)
+<br>(you can use this [online tool](https://convertio.co/webp-converter/) to convert images)
 
 ## Step 3 - Change the total_images value
 Open the file ``script.js``
