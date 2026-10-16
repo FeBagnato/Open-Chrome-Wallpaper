@@ -9,6 +9,7 @@ function setBackgroundImage(){
 function setShortcuts(){
     let shortcuts = JSON.parse(data)
     let div_shortcuts = document.getElementById('shortcuts')
+    const LINK_API = "https://api.companyenrich.com/logo/"
 
     for(let i in shortcuts){
         let link = ''
@@ -25,7 +26,7 @@ function setShortcuts(){
         }
 
         div_shortcuts.innerHTML += "<div id='" + shortcuts[i].name + "' class='website'>" +
-            "<img src='https://logo.clearbit.com/" + link + 
+            "<img src='" + LINK_API + link + 
                 "' width='50px' height='50px'>" +
             "<p>" + shortcuts[i].name + "</p>" +
         "</div>"
@@ -33,7 +34,7 @@ function setShortcuts(){
 
     for(let i in shortcuts){
         document.getElementById(shortcuts[i].name).addEventListener('click', () => {
-            location.href = shortcuts[i].link
+            location.href = "https://" + shortcuts[i].link
         })
     }
 }
