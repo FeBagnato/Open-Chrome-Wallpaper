@@ -1,4 +1,4 @@
 data = '[' +
-'{"name": "Github", "link": "https://github.com"},' +
-'{"name": "Youtube", "link": "https://youtube.com"}' +
+'{"name": "Github", "link": "www.github.com"},' +
+'{"name": "Youtube", "link": "youtube.com"}' +
 ']'
