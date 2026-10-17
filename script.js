@@ -25,11 +25,21 @@ function setShortcuts(){
             link += this_link[y]
         }
 
-        div_shortcuts.innerHTML += "<div id='" + shortcuts[i].name + "' class='website'>" +
-            "<img src='" + LINK_API + link + 
-                "' width='50px' height='50px'>" +
-            "<p>" + shortcuts[i].name + "</p>" +
-        "</div>"
+        let website = document.createElement('div')
+        website.id = shortcuts[i].name
+        website.className = 'website'
+
+        let logo = document.createElement('img')
+        logo.src = LINK_API + link
+        logo.setAttribute('width', '50px')
+        logo.setAttribute('height', '50px')
+
+        let name = document.createElement('p')
+        name.textContent = shortcuts[i].name
+
+        website.appendChild(logo)
+        website.appendChild(name)
+        div_shortcuts.appendChild(website)
     }
 
     for(let i in shortcuts){
