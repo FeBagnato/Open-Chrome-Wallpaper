@@ -7,7 +7,7 @@ function setBackgroundImage(){
 }
 
 function setShortcuts(){
-    let shortcuts = JSON.parse(data)
+    let shortcuts = data
     let div_shortcuts = document.getElementById('shortcuts')
     const LINK_API = "https://api.companyenrich.com/logo/"
 
