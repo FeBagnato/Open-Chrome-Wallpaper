@@ -2,8 +2,7 @@ function setBackgroundImage(){
     let total_images = 3
     let random_image = Math.floor(Math.random() * total_images) + 1
     
-    document.body.setAttribute('style', '--img:url("images/' 
-    + random_image + '.webp")')
+    document.body.style.setProperty('--img', 'url("images/' + random_image + '.webp")')
 }
 
 function setShortcuts(){
