@@ -11,41 +11,37 @@ function setShortcuts(){
     let div_shortcuts = document.getElementById('shortcuts')
     const LINK_API = "https://api.companyenrich.com/logo/"
 
-    for(let i in shortcuts){
-        let link = ''
+    for (const { name, link } of shortcuts){
+        let domain = ''
         let after_tld = false
-        let this_link = shortcuts[i].link
-        for (let y in this_link){
-            if(this_link[y] == '.'){
+        for (const char of link){
+            if(char == '.'){
                 after_tld = true
             }
-            else if(this_link[y] == '/'){
+            else if(char == '/'){
                 if(after_tld == true) break
             }
-            link += this_link[y]
+            domain += char
         }
 
         let website = document.createElement('div')
-        website.id = shortcuts[i].name
         website.className = 'website'
 
+        website.addEventListener('click', () => {
+            location.href = "https://" + link
+        })
+
         let logo = document.createElement('img')
-        logo.src = LINK_API + link
+        logo.src = LINK_API + domain
         logo.setAttribute('width', '50px')
         logo.setAttribute('height', '50px')
 
-        let name = document.createElement('p')
-        name.textContent = shortcuts[i].name
+        let label = document.createElement('p')
+        label.textContent = name
 
         website.appendChild(logo)
-        website.appendChild(name)
+        website.appendChild(label)
         div_shortcuts.appendChild(website)
-    }
-
-    for(let i in shortcuts){
-        document.getElementById(shortcuts[i].name).addEventListener('click', () => {
-            location.href = "https://" + shortcuts[i].link
-        })
     }
 }
 
